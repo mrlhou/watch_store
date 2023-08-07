@@ -1,0 +1,81 @@
+/* None */
+.none {
+  display: none;
+}
+/* Block */
+.block {
+  display: block;
+}
+/* Flex */
+.flex {
+  display: flex;
+}
+.j-s-b {
+  justify-content: space-between;
+}
+.j-s-c {
+  justify-content: center;
+}
+.a-c {
+  align-items: center;
+}
+/* Grid */
+.grid {
+  display: grid;
+}
+.grid-template {
+  grid-template-columns: repeat(auto-fill, minmax());
+}
+/* margin */
+/* padding */
+/* border-raduis */
+.b-r-c {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.b-r-10px {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+/* Colors */
+.c-white {
+  color: var(--white);
+}
+.c-black {
+  color: var(--black);
+}
+.c-gray {
+  color: var(--gray);
+}
+/* Text */
+.txt-cap {
+  text-transform: capitalize;
+}
+.txt-center {
+  text-align: center;
+}
+/* Position */
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+/* background */
+.b-black {
+  background-color: var(--black);
+}
+/* Transition 0.4s */
+.tr-4s {
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}

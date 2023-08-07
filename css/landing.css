@@ -1,0 +1,98 @@
+/* Landing Section */
+.landing {
+  background-image: url(../imgs/background.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 150px;
+}
+.landing .title {
+  font-size: 50px;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+}
+.landing-content .top-product {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.landing-content .box {
+  height: 400px;
+  flex-direction: column;
+  overflow: hidden;
+}
+.landing-content .box .img {
+  overflow: hidden;
+  height: 300px;
+}
+.landing-content .box .img::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0%;
+  height: 0%;
+  background-color: var(--gray);
+  z-index: 2;
+  border-bottom-left-radius: 30%;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  opacity: 0.4;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.landing-content .box .img.buy::before {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0 500px var(--gray);
+}
+.landing-content .box .desc {
+  font-size: 25px;
+  font-weight: 600;
+  padding-left: 30px;
+  margin-top: 20px;
+}
+.landing-content .box:hover img {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+.landing-content .box img {
+  width: 100%;
+  height: 100%;
+}
+.landing-content .box a {
+  z-index: 2;
+  font-size: 20px;
+  background-color: var(--orange);
+  padding: 10px 20px;
+  font-weight: 600;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 0.2s;
+}
+.landing-content .box .img.buy a {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 991px) {
+  .landing {
+    height: 100%;
+  }
+  .landing .title {
+    font-size: 32px;
+  }
+  .landing-content .box .desc {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,131 @@
+/* Sale Section */
+.sale {
+  padding: 100px 0;
+  background-color: var(--white);
+}
+.sale img {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+}
+.sale .info {
+  flex-basis: 45%;
+  padding-left: 40px;
+  flex-direction: column;
+  height: 600px;
+  color: var(--black);
+}
+.sale .info > span {
+  width: 80px;
+  color: var(--white);
+  z-index: 1;
+  font-size: 25px;
+  text-align: center;
+}
+.sale .info > span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 62%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--black);
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.sale h1 {
+  font-size: 40px;
+}
+.sale .price {
+  font-size: 20px;
+}
+.sale .price span {
+  font-weight: 600;
+  padding-left: 10px;
+}
+.sale .price span:first-child {
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.sale .info p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.sale .info a {
+  width: 200px;
+  height: 70px;
+  background-color: var(--orange);
+  line-height: 70px;
+  font-size: 25px;
+  color: var(--white);
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+.sale .info a:hover {
+  opacity: 1;
+}
+.sale .properties li {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.sale .properties li span {
+  font-weight: 500;
+  padding-left: 10px;
+}
+.sale .desc {
+  margin-top: 30px;
+}
+.sale .desc > span {
+  display: inline-block;
+  width: 300px;
+  line-height: 60px;
+  height: 60px;
+  font-size: 20px;
+  background-color: rgb(127 126 126 / 27%);
+  margin-bottom: 20px;
+  border-top: 3px solid #eee;
+  cursor: pointer;
+}
+
+.sale .desc > span:hover,
+.sale .desc > span.active {
+  border-color: var(--black);
+  background-color: var(--white);
+}
+.sale .desc p {
+  line-height: 1.8;
+  width: 600px;
+  display: none;
+}
+.sale .desc p.active {
+  display: block;
+}
+.sale .desc p span {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+@media (max-width: 991px) {
+  .sale-content {
+    flex-direction: column;
+  }
+  .sale-content img {
+    width: 100%;
+  }
+  .sale .info {
+    margin-top: 20px;
+  }
+  .sale h1 {
+    font-size: 37px;
+  }
+  .sale .desc {
+    text-align: center;
+  }
+  .sale .desc p {
+    width: 100%;
+  }
+}

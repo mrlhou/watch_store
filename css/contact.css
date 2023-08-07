@@ -1,0 +1,159 @@
+/* Contact Section */
+.contact {
+  padding: 100px 0;
+}
+.contact h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* Info Part */
+.contact .info span,
+.contact .info .email {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.contact .info .email {
+  text-transform: lowercase;
+  width: fit-content;
+}
+.contact .info .email::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: var(--orange);
+  left: 50%;
+  transition: 0.2s;
+  transform: translateX(-50%);
+  bottom: -4px;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.contact .info .email:hover:before {
+  width: 100%;
+}
+.contact .info .social-icons {
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+
+/* Form Part */
+.contact form {
+  flex-basis: 70%;
+}
+.contact form div {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.contact form li {
+  margin-bottom: 20px;
+}
+.contact form li i {
+  left: 0px;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: var(--gray);
+}
+.contact form div input,
+.contact form textarea {
+  width: 100%;
+  padding: 10px 0;
+  padding-left: 30px;
+  outline: none;
+  border: 0;
+  border-bottom: 0.5px solid var(--white);
+  font-size: 16px;
+}
+.contact form div input:focus + i,
+.contact form textarea:focus + i {
+  color: var(--orange);
+}
+.contact form :is(input, textarea)::placeholder {
+  text-transform: capitalize;
+}
+.contact form li:not(.button)::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0.5px;
+  background-color: var(--orange);
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.contact form li:hover::before {
+  width: 100%;
+}
+.contact form textarea {
+  height: 50px;
+  resize: vertical;
+}
+.contact form textarea + i {
+  top: 20px;
+}
+.contact form button i {
+  left: 85%;
+}
+.contact form button {
+  width: 250px;
+  height: 60px;
+  outline: none;
+  border: 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background-color: #dee2e6;
+  cursor: pointer;
+  z-index: 1;
+}
+.contact form button::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  background-color: var(--orange);
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.contact form button:hover,
+.contact form button:hover i {
+  color: var(--white);
+}
+.contact form button:hover::before {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .contact .content {
+    flex-direction: column;
+  }
+  .contact .info {
+    margin-bottom: 20px;
+  }
+  .contact :is(.info, form) {
+    width: 100%;
+  }
+}
+
+/* Map */
+.map iframe {
+  width: 100%;
+  height: 450px;
+}
